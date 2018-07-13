@@ -1,0 +1,34 @@
+<resources>
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MenuStyle" parent="@style/Widget.AppCompat.Light.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item><!--把该属性改为false即可使menu位置位于toolbar之下-->
+        <!--按钮的背景颜色-->
+        <item name="android:popupBackground">@color/colorPrimary</item>
+        <!--弹出菜单与标题栏的垂直间距-->
+        <item name="android:dropDownVerticalOffset">10.0dip</item>
+        <!--menu菜单的字体颜色-->
+        <item name="android:textColorPrimary">@color/whitetext</item>
+        <!--menu字体大小-->
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>

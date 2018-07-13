@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#176ce3</color>
+    <color name="colorPrimaryDark">#176ce3</color>
+    <color name="colorAccent">#176ce3</color>
+
+
+    <!--Filter-->
+    <color name="filterBackground">#f9f9f9</color>
+    <color name="filterDivider">#e6e5e5</color>
+    <color name="filterTitle">#151414</color>
+    <color name="filterTitleLight">#888888</color>
+
+
+    <!--Login-->
+    <color name="color_login_button_text">#FFFFFF</color>
+    <color name="color_login_button">#176ce3</color>
+    <color name="color_login_button_pressed">#cccccc</color>
+    <color name="color_login_hint">#999999</color>
+    <color name="color_login_line">#eeeeee</color>
+    <color name="color_login_background">#ffffff</color>
+
+
+
+
+    <color name="whitetext">#FFFFFF</color><!--白天白色字体即为白色-->
+    <color name="app_background_color">#ebebeb</color>
+
+    <color name="black">#151414</color>
+    <color name="black_overlay">#66000000</color>
+
+    <color name="white">#FFFFFF</color><!--白色 -->
+    <color name="grey">#808080</color><!--灰色 -->
+    <color name="solid_red">#f00</color>
+
+    <color name="backColor">#2000</color>
+
+
+
+</resources>

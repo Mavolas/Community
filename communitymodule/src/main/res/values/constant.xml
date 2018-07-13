@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 以下内容不能删除，只能修改 -->
+	<string name="cst_dir_data">data/com/ziruk/watermgr</string>
+	<!-- 巡检是否必须扫描，true：是；false：否 -->
+	<string name="checkMustNFC">false</string>
+	<!-- NFC卡模式，1：通用NFC模式；2：正朝时代定制 -->
+	<string name="NFCMode">1</string>
+
+	<!-- 后台WebService站点根路径 -->
+	<!--
+    <string name="cst_url_root">http://192.168.1.17:43655/</string>
+     <string name="cst_url_root">http://172.16.1.1:8082/</string>
+     -->
+
+	<!--    <string name="cst_url_root">http://220.171.28.74:9011/PurchasingApi/</string>  -->   <!-- 正式服务器地址 -->
+
+	<string name="cst_url_root">http://proj.ziruk.com:9010/PurchasingApi/</string>
+
+	<!--   <string name="cst_url_root">http://172.16.0.177:60842/</string>  -->
+
+	<!--     <string name="cst_url_root">http://172.18.1.204:8005/PurchasingApi/</string>   -->
+
+	<!-- Android用身份验证路径 -->
+	<string name="cst_url_login">SystemAccount/Authenticate</string>
+	<!-- 标识SessionID的参数名称 -->
+	<string name="cst_sessionid_name">ASP.NET_SessionId</string>
+	<!-- 身份验证参数名：用户ID -->
+	<string name="cst_LoginParam_UserName">UserName</string>
+	<!-- 身份验证参数名：密码 -->
+	<string name="cst_LoginParam_Password">Password</string>
+	<!-- 身份验证参数名：验证结果 -->
+	<string name="cst_Authentication_ParamName">status</string>
+
+	<!-- Android用退出登录路径 -->
+	<string name="cst_url_logout">SystemAccount/LogOut</string>
+
+	<!-- 最新版本有无判断URL -->
+	<string name="cst_url_hasNewVersion">PurchasingApiAPP/GetLastVersionInfo</string>
+
+	<!-- 错误日志接收URL -->
+	<string name="cst_url_errorPost">AppLogger/ReceiveLog</string>
+
+	<!-- 请求参数：只接受JSON类型值标志 -->
+	<string name="cst_JsonReultParasName">_ResultActionType</string>
+	<string name="cst_JsonReultParasValue">json</string>
+
+	<!-- 请求参数：上传JSON数据时后台取得JSON字符串参数名称 -->
+	<string name="cst_JsonDataUpLoadParaName">_PostJSONParasName</string>
+
+	<!-- 身份验证结果代码：用户名被锁定 -->
+	<string name="cst_Authentication_LockedUser">1</string>
+	<!-- 身份验证结果代码：密码错误 -->
+	<string name="cst_Authentication_ErrorPassword">2</string>
+	<!-- 身份验证结果代码：用户名不存在 -->
+	<string name="cst_Authentication_UnExitUser">3</string>
+	<!-- 身份验证结果代码：验证通过 -->
+	<string name="cst_Authentication_OK">0</string>
+
+</resources>

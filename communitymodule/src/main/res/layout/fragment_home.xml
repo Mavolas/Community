@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/toolbar_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+            <LinearLayout
+                android:id="@+id/llGroup2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#f9f9f9"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="水厂日常工作"
+                    android:textColor="#969696" />
+            </LinearLayout>
+
+            <com.ziruk.oa.communitymodule.view.NoScrollGridView
+                android:id="@+id/gridView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="1dp"
+                android:listSelector="@null"
+                android:numColumns="4"
+                android:verticalSpacing="1dp" />
+
+            <LinearLayout
+                android:id="@+id/llGroup3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#f9f9f9"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="防疫人员"
+                    android:textColor="#969696" />
+            </LinearLayout>
+
+            <com.ziruk.oa.communitymodule.view.NoScrollGridView
+                android:id="@+id/gridView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="1dp"
+                android:listSelector="@null"
+                android:numColumns="4"
+                android:verticalSpacing="1dp" />
+
+            <LinearLayout
+                android:id="@+id/llGroup1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#f9f9f9"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="数据查询"
+                    android:textColor="#969696" />
+            </LinearLayout>
+
+            <com.ziruk.oa.communitymodule.view.NoScrollGridView
+                android:id="@+id/gridView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="1dp"
+                android:listSelector="@null"
+                android:numColumns="4"
+                android:verticalSpacing="1dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

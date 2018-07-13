@@ -1,0 +1,71 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+     >
+
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" >
+	
+	    <TextView
+	        android:id="@+id/tv_version"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginBottom="40dp"
+	        android:text="v1.0" 
+	        android:textColor="@color/black"
+	        />
+	    <TextView
+	        android:id="@+id/tv_url"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_above="@+id/tv_version"
+	        android:layout_marginTop="5dp"
+	        android:textSize="12sp"
+	        android:textColor="#E0E0E0"
+	        android:text="http://" 
+	        />
+	    	
+	    <ImageView
+	        android:id="@+id/iv_icon"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="100dp"
+	        android:src="@mipmap/ic_launcher" />
+	    
+	    <TextView
+	        android:id="@+id/tv_title1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/iv_icon"
+	        android:layout_marginTop="40dp"
+	        android:text="昆仑水务集团智慧水务项目" 
+	        android:textColor="@color/black"
+	        android:textSize="18sp"
+	        />
+	    
+	    <TextView
+	        android:id="@+id/tv_title2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/tv_title1"
+	        android:layout_marginTop="20dp"
+	        android:text="移动工作平台" 
+	        android:textColor="@color/black"
+	        android:textSize="18sp"
+	        />
+	    	    	    
+	</RelativeLayout>
+
+
+</FrameLayout>
