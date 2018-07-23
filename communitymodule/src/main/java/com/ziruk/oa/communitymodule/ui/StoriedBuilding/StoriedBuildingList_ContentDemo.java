@@ -6,6 +6,7 @@ package com.ziruk.oa.communitymodule.ui.StoriedBuilding;
  */
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -149,6 +150,13 @@ public class StoriedBuildingList_ContentDemo extends Fragment {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent intent =new Intent();
+
+                intent.setClass(mContext,StoriedBuildingDetail_ActivityDemo.class);
+
+                startActivity(intent);
+
 
             }
         });

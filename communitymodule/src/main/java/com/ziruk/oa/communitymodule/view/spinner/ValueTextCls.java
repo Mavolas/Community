@@ -4,12 +4,13 @@ package com.ziruk.oa.communitymodule.view.spinner;
  * Created by 宋棋安
  * on 2018/6/15.
  */
-public class CodeValueCls  {
-    public String key;
+public class ValueTextCls {
+    public String value;
     public String text;
-    public CodeValueCls(String key, String text)
+
+    public ValueTextCls(String value, String text)
     {
-        this.key = key;
+        this.value = value;
         this.text = text;
     }
 

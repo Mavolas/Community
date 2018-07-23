@@ -21,6 +21,13 @@
     <color name="color_login_background">#ffffff</color>
 
 
+    <!--input-->
+
+    <color name="color_input_text">#151414</color>
+    <color name="color_input_hint">#cccccc</color>
+    <color name="color_input_title">#151414</color>
+
+
 
 
     <color name="whitetext">#FFFFFF</color><!--白天白色字体即为白色-->

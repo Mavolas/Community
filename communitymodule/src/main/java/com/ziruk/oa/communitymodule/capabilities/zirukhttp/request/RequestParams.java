@@ -19,11 +19,11 @@ public  class RequestParams {
 	}
 
 	/**
-	 * Constructs a new RequestParams instance containing the key/value string
+	 * Constructs a new RequestParams instance containing the value/value string
 	 * params from the specified map.
 	 *
 	 * @param source
-	 *            the source key/value string map to add.
+	 *            the source value/value string map to add.
 	 */
 	public RequestParams(Map<String, String> source) {
 		if (source != null) {
@@ -35,10 +35,10 @@ public  class RequestParams {
 
 	/**
 	 * Constructs a new RequestParams instance and populate it with a single
-	 * initial key/value string param.
+	 * initial value/value string param.
 	 *
 	 * @param key
-	 *            the key name for the intial param.
+	 *            the value name for the intial param.
 	 * @param value
 	 *            the value string for the initial param.
 	 */
@@ -51,10 +51,10 @@ public  class RequestParams {
 	}
 
 	/**
-	 * Adds a key/value string pair to the request.
+	 * Adds a value/value string pair to the request.
 	 *
 	 * @param key
-	 *            the key name for the new param.
+	 *            the value name for the new param.
 	 * @param value
 	 *            the value string for the new param.
 	 */

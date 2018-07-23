@@ -31,4 +31,15 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="spinner_style">
+        <item name="android:background">@drawable/edit_text_style_spinner</item>
+        <item name="android:popupBackground">@drawable/edit_text_style_spinner</item>
+    </style>
+
+    <style name="calendar_style">
+        <item name="android:background">@drawable/edit_text_style_calendar</item>
+        <item name="android:popupBackground">@drawable/edit_text_style_calendar</item>
+    </style>
+
+
 </resources>

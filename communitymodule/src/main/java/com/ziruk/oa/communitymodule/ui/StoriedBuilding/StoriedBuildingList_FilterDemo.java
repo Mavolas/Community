@@ -26,7 +26,7 @@ import com.ziruk.oa.communitymodule.ui.StoriedBuilding.bean.DepartInfo;
 import com.ziruk.oa.communitymodule.ui.StoriedBuilding.bean.FilterBean;
 import com.ziruk.oa.communitymodule.util.CurrentUserInfoUtils;
 import com.ziruk.oa.communitymodule.util.ToastUtil;
-import com.ziruk.oa.communitymodule.view.spinner.CodeValueCls;
+import com.ziruk.oa.communitymodule.view.spinner.ValueTextCls;
 import com.ziruk.oa.communitymodule.view.spinner.MySpinner;
 
 
@@ -133,12 +133,12 @@ public class StoriedBuildingList_FilterDemo extends Fragment {
 
                                 mMsDepartment.setDataBindListener(new MySpinner.OnDataBindingBeginListener() {
                                     @Override
-                                    public List<CodeValueCls> getData() {
+                                    public List<ValueTextCls> getData() {
 
-                                        List<CodeValueCls> list = new ArrayList<CodeValueCls>();
+                                        List<ValueTextCls> list = new ArrayList<ValueTextCls>();
 
                                         for (DepartInfo DepartList : mDepartList) {
-                                            list.add(new CodeValueCls(DepartList.ID, DepartList.Name));
+                                            list.add(new ValueTextCls(DepartList.ID, DepartList.Name));
                                         }
 
                                         return list;
@@ -170,36 +170,36 @@ public class StoriedBuildingList_FilterDemo extends Fragment {
 
         mMsStatus.setDataBindListener(new MySpinner.OnDataBindingBeginListener() {
             @Override
-            public List<CodeValueCls> getData() {
+            public List<ValueTextCls> getData() {
 
-                List<CodeValueCls> list = new ArrayList<CodeValueCls>();
-                list.add(new CodeValueCls("110", "招标书编制中"));
-                list.add(new CodeValueCls("120", "招标书审批中"));
-                list.add(new CodeValueCls("130", "招标书审批否决"));
-                list.add(new CodeValueCls("140", "招标书审批通过"));
-                list.add(new CodeValueCls("150", "招标公告已发布"));
+                List<ValueTextCls> list = new ArrayList<ValueTextCls>();
+                list.add(new ValueTextCls("110", "招标书编制中"));
+                list.add(new ValueTextCls("120", "招标书审批中"));
+                list.add(new ValueTextCls("130", "招标书审批否决"));
+                list.add(new ValueTextCls("140", "招标书审批通过"));
+                list.add(new ValueTextCls("150", "招标公告已发布"));
 
-                list.add(new CodeValueCls("160", "回标中"));
-                list.add(new CodeValueCls("220", "开标中"));
-                list.add(new CodeValueCls("230", "已开标"));
-                list.add(new CodeValueCls("310", "初步评审中"));
-                list.add(new CodeValueCls("320", "详细评审中"));
+                list.add(new ValueTextCls("160", "回标中"));
+                list.add(new ValueTextCls("220", "开标中"));
+                list.add(new ValueTextCls("230", "已开标"));
+                list.add(new ValueTextCls("310", "初步评审中"));
+                list.add(new ValueTextCls("320", "详细评审中"));
 
-                list.add(new CodeValueCls("330", "谈判中"));
-                list.add(new CodeValueCls("335", "谈判结束"));
-                list.add(new CodeValueCls("340", "等待二次报价"));
-                list.add(new CodeValueCls("350", "评标结束"));
-                list.add(new CodeValueCls("410", "定标报告待做成"));
+                list.add(new ValueTextCls("330", "谈判中"));
+                list.add(new ValueTextCls("335", "谈判结束"));
+                list.add(new ValueTextCls("340", "等待二次报价"));
+                list.add(new ValueTextCls("350", "评标结束"));
+                list.add(new ValueTextCls("410", "定标报告待做成"));
 
-                list.add(new CodeValueCls("420", "评标委员会未审定"));
-                list.add(new CodeValueCls("430", "评标委员会已审定"));
-                list.add(new CodeValueCls("440", "评标委员会未通过"));
-                list.add(new CodeValueCls("450", "领导审核中"));
-                list.add(new CodeValueCls("460", "领导审核通过"));
+                list.add(new ValueTextCls("420", "评标委员会未审定"));
+                list.add(new ValueTextCls("430", "评标委员会已审定"));
+                list.add(new ValueTextCls("440", "评标委员会未通过"));
+                list.add(new ValueTextCls("450", "领导审核中"));
+                list.add(new ValueTextCls("460", "领导审核通过"));
 
-                list.add(new CodeValueCls("470", "领导审核驳回"));
-                list.add(new CodeValueCls("480", "已发中标通告"));
-                list.add(new CodeValueCls("Z00", "流标"));
+                list.add(new ValueTextCls("470", "领导审核驳回"));
+                list.add(new ValueTextCls("480", "已发中标通告"));
+                list.add(new ValueTextCls("Z00", "流标"));
                 //[start] 状态赋值
 
                 return list;

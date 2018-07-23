@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/toolbar_layout"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/ll_Operation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#4caf50"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:paddingTop="5dp"
+            android:text="提交"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_Operation"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:text="所属区域"
+                    android:textColor="@color/color_input_title"
+                    android:textSize="16sp" />
+
+                <com.ziruk.oa.communitymodule.view.spinner.MySpinner
+                    android:id="@+id/spinnerFactory"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/color_input_text"
+                    android:textColorHint="@color/color_input_hint"
+                    android:textSize="16sp"
+                    android:hint="请选择所属区域"
+                    style="@style/spinner_style"
+                    android:padding="5dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="所属区域"
+                    android:textColor="@color/color_input_title"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editguzhangxingxi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="20dp"
+                    android:padding="5dp"
+                    android:hint="请填故障描述信息"
+                    android:maxLength="100"
+                    android:textColor="@color/color_input_text"
+                    android:textColorHint="@color/color_input_hint"
+                    android:textSize="16sp"
+                    android:inputType="textMultiLine"
+                    android:gravity="top"
+                    android:minLines="3"
+                    android:maxLines="10"
+                    android:scrollbars="vertical"
+                    android:background="@drawable/edit_text_style_selector"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:text="所属区域"
+                    android:textColor="@color/color_input_title"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/spinnerFactory1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/edit_text_style_selector"
+                    android:textSize="16sp"
+                    android:textColor="@color/color_input_text"
+                    android:textColorHint="@color/color_input_hint"
+                    android:text="我是测试雷人"
+                    android:padding="5dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:text="所属区域"
+                    android:textColor="@color/color_input_title"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/sp_test"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginEnd="20dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/color_input_text"
+                    android:textColorHint="@color/color_input_hint"
+                    android:spinnerMode="dialog"
+                    style="@style/spinner_style"
+                    android:text="我是测试雷人" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:text="开始时间"
+                    android:textColor="@color/color_input_title"
+                    android:textSize="16sp" />
+
+                <com.ziruk.oa.communitymodule.view.MyDateTimePicker
+                    android:id="@+id/datetimeFrom"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="请填写开始时间"
+                    android:textSize="16sp"
+                    pattern = "yyyy/MM/dd HH:mm"
+                    ymdonly = "false"
+                    timeonly = "false"
+                    style="@style/calendar_style"
+                    android:padding="5dp" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    </RelativeLayout>
+
+</LinearLayout>

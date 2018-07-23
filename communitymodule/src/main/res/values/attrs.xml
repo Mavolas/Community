@@ -29,4 +29,11 @@
         <attr name="drawableWidth" format="dimension" />
         <attr name="drawableHeight" format="dimension" />
     </declare-styleable>
+
+    <declare-styleable name="MyDateTimePiker">
+        <attr name="imgsrc" format="reference"/>
+        <attr name="titleText" format="string"/>
+        <attr name="contentText" format="string"/>
+    </declare-styleable>
+
 </resources>
