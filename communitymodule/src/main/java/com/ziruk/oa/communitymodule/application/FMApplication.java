@@ -6,6 +6,7 @@ import android.app.Application;
 import android.content.Context;
 
 
+import com.facebook.drawee.backends.pipeline.Fresco;
 import com.ziruk.oa.communitymodule.capabilities.zirukhttp.ZirukHttpClient;
 import com.ziruk.oa.communitymodule.util.Config;
 
@@ -51,6 +52,8 @@ public class FMApplication extends Application {
                 })
                 .build();
         ZirukHttpClient.initClient(okHttpClient);
+
+        Fresco.initialize(this);
 
 
 //        String address = Config.LoadConfig(getApplicationContext(), "ServerAddress");

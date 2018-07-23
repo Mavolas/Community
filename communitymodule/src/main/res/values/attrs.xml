@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="TimeLineMarker">
-        <!--圆点大小-->
-        <attr name="markerSize" format="dimension" />
-        <!--圆点颜色或者图片-->
-        <attr name="marker" format="color|reference" />
-        <!--上面线段颜色或者图片-->
-        <attr name="beginLine" format="color|reference" />
-        <!--下面线段颜色或者图片-->
-        <attr name="endLine" format="color|reference" />
-        <!--线段粗细-->
-        <attr name="lineSize" format="dimension" />
-        <!--横向还是竖向-->
-        <attr name="oritation" format="boolean" />
-    </declare-styleable>
 
-    <!--自定义圆头像-->
-    <declare-styleable name="RoundAngleImageView">
-        <attr name="roundWidth" format="dimension" />
-        <attr name="roundHeight" format="dimension" />
-    </declare-styleable>
-
+    <!--    登录页面头像自定义View属性-->
     <declare-styleable name="drawableText">
         <attr name="leftDrawable" format="reference|integer" />
         <attr name="rightDrawable" format="reference|integer" />
@@ -30,10 +11,11 @@
         <attr name="drawableHeight" format="dimension" />
     </declare-styleable>
 
-    <declare-styleable name="MyDateTimePiker">
-        <attr name="imgsrc" format="reference"/>
-        <attr name="titleText" format="string"/>
-        <attr name="contentText" format="string"/>
+    <!--    时间选择器自定义控件属性-->
+    <declare-styleable name="MyDateTimePicker">
+        <attr name="dateFormat" format="string"/>
+        <attr name="yearMonthOnly" format="boolean"/>
+        <attr name="timeOnly" format="boolean"/>
     </declare-styleable>
 
 </resources>

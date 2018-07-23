@@ -30,6 +30,17 @@
 
         <activity android:name="com.ziruk.oa.communitymodule.ui.StoriedBuilding.StoriedBuildingDetail_ActivityDemo"/>
 
+
+        <activity
+            android:name="cn.finalteam.rxgalleryfinal.ui.activity.MediaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme_Light.Blue"
+            android:exported="true" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:theme="@style/Theme_Light.Blue"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

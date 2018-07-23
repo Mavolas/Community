@@ -31,7 +31,7 @@
             android:layout_height="40dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:background="#4caf50"
+            android:background="@drawable/btn_confirm_selector"
             android:gravity="center"
             android:paddingBottom="5dp"
             android:paddingLeft="40dp"
@@ -79,7 +79,6 @@
                     android:layout_marginEnd="20dp"
                     android:layout_marginTop="5dp"
                     android:textColor="@color/color_input_text"
-                    android:textColorHint="@color/color_input_hint"
                     android:textSize="16sp"
                     android:hint="请选择所属区域"
                     style="@style/spinner_style"
@@ -111,7 +110,6 @@
                     android:hint="请填故障描述信息"
                     android:maxLength="100"
                     android:textColor="@color/color_input_text"
-                    android:textColorHint="@color/color_input_hint"
                     android:textSize="16sp"
                     android:inputType="textMultiLine"
                     android:gravity="top"
@@ -147,7 +145,6 @@
                     android:background="@drawable/edit_text_style_selector"
                     android:textSize="16sp"
                     android:textColor="@color/color_input_text"
-                    android:textColorHint="@color/color_input_hint"
                     android:text="我是测试雷人"
                     android:padding="5dp" />
             </RelativeLayout>
@@ -162,12 +159,12 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="20dp"
-                    android:text="所属区域"
+                    android:text="下拉框"
                     android:textColor="@color/color_input_title"
                     android:textSize="16sp" />
 
-                <Spinner
-                    android:id="@+id/sp_test"
+                <com.ziruk.oa.communitymodule.view.spinner.MySpinner
+                    android:id="@+id/msp_test"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_centerVertical="true"
@@ -175,10 +172,9 @@
                     android:layout_marginEnd="20dp"
                     android:textSize="16sp"
                     android:textColor="@color/color_input_text"
-                    android:textColorHint="@color/color_input_hint"
-                    android:spinnerMode="dialog"
+                    android:padding="5dp"
                     style="@style/spinner_style"
-                    android:text="我是测试雷人" />
+                    android:hint="我是测试" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -196,23 +192,54 @@
                     android:textSize="16sp" />
 
                 <com.ziruk.oa.communitymodule.view.MyDateTimePicker
+                    xmlns:date="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/datetimeFrom"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentRight="true"
                     android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="100dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginEnd="20dp"
                     android:layout_marginTop="5dp"
                     android:hint="请填写开始时间"
+                    date:dateFormat="yyyy-MM-dd hh:mm"
                     android:textSize="16sp"
-                    pattern = "yyyy/MM/dd HH:mm"
-                    ymdonly = "false"
-                    timeonly = "false"
                     style="@style/calendar_style"
                     android:padding="5dp" />
             </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:text="图片上传"
+                    android:textColor="@color/color_input_title"
+                    android:textSize="16sp" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/my_image_view"
+                    android:layout_marginStart="100dp"
+                    android:layout_width="200dp"
+                    android:layout_height="400dp"
+                    app:fadeDuration="300"
+                    />
+
+                <Button
+                    android:id="@+id/btn_uploads"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="点击上传"
+                    android:layout_marginStart="300dp"/>
+            </RelativeLayout>
+
+
+
 
 
         </LinearLayout>

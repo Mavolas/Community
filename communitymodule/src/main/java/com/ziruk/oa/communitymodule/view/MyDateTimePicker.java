@@ -9,16 +9,17 @@ import java.util.List;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.time.DateFormatUtils;
 
-
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.TimePicker;
 
+import com.ziruk.oa.communitymodule.R;
 import com.ziruk.oa.communitymodule.view.spinner.ValueTextCls;
 
 public class MyDateTimePicker  extends android.support.v7.widget.AppCompatEditText {
@@ -29,9 +30,8 @@ public class MyDateTimePicker  extends android.support.v7.widget.AppCompatEditTe
 	private Date mCurrentSelectedItemvalue = null;
 	private String mCurrentSelectedItemText = "";
 
-
-	private String mCurrentPattern = "yyyy-MM-dd hh:mm:ss";
-	private Boolean mYMDOnly = false;
+	private String mDateFormat = "yyyy-MM-dd hh:mm:ss";
+	private Boolean mYearMonthOnly = false;
 	private Boolean mTimeOnly = false;
 	
 	/** 选择项目后监听程序 */
@@ -44,13 +44,32 @@ public class MyDateTimePicker  extends android.support.v7.widget.AppCompatEditTe
 
 		this.setCursorVisible(false);
 		this.setFocusable(false);
+		this.setSingleLine(true);
+
+		TypedArray typedArray=context.obtainStyledAttributes( attrs, R.styleable.MyDateTimePicker);
+
+		try{
+
+			String DateFormat = typedArray.getString( R.styleable.MyDateTimePicker_dateFormat);
+			boolean YearMonthOnly = typedArray.getBoolean( R.styleable.MyDateTimePicker_yearMonthOnly,false);
+			boolean TimeOnly = typedArray.getBoolean( R.styleable.MyDateTimePicker_timeOnly,false);
+
+			mYearMonthOnly=YearMonthOnly;
+			mTimeOnly=TimeOnly;
+			mDateFormat =DateFormat;
+
+			if(DateFormat==null){
+				mDateFormat = "yyyy-MM-dd hh:mm";
+			}
 
 
-		mCurrentPattern = attrs.getAttributeValue(null, "pattern");
-		mYMDOnly = StringUtils.equalsIgnoreCase(attrs.getAttributeValue(null, "ymdonly"), "true");
-		mTimeOnly = StringUtils.equalsIgnoreCase(attrs.getAttributeValue(null, "timeonly"), "true");
+		}finally {
 
-		
+			typedArray.recycle();
+
+		}
+
+
 		this.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -59,7 +78,7 @@ public class MyDateTimePicker  extends android.support.v7.widget.AppCompatEditTe
 				if (mCurrentSelectedItemvalue!=null)
 					cDay.setTime(mCurrentSelectedItemvalue);  
 				
-				if (mYMDOnly == true) {
+				if ( mYearMonthOnly == true) {
 			        Dialog dialog = new DatePickerDialog(
 			        		mContext,
 			                new DatePickerDialog.OnDateSetListener() {
@@ -167,7 +186,7 @@ public class MyDateTimePicker  extends android.support.v7.widget.AppCompatEditTe
 			mCurrentSelectedItemText = "";
 		}
 		else {
-			mCurrentSelectedItemText = DateFormatUtils.format(this.mCurrentSelectedItemvalue, mCurrentPattern);
+			mCurrentSelectedItemText = DateFormatUtils.format(this.mCurrentSelectedItemvalue, mDateFormat );
 		}
 		
 		if (this != null) this.setText(mCurrentSelectedItemText);
