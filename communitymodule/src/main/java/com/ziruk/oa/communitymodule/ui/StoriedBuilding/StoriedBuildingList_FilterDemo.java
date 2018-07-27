@@ -20,7 +20,7 @@ import com.ziruk.oa.communitymodule.R;
 import com.ziruk.oa.communitymodule.capabilities.zirukhttp.ZirukHttpClient;
 import com.ziruk.oa.communitymodule.capabilities.zirukhttp.callback.DisposeDataListener;
 import com.ziruk.oa.communitymodule.capabilities.zirukhttp.exception.ZirukHttpException;
-import com.ziruk.oa.communitymodule.capabilities.zirukhttp.mdel.ResponseCls;
+import com.ziruk.oa.communitymodule.capabilities.zirukhttp.model.ResponseCls;
 import com.ziruk.oa.communitymodule.capabilities.zirukhttp.request.RequestParams;
 import com.ziruk.oa.communitymodule.ui.StoriedBuilding.bean.DepartInfo;
 import com.ziruk.oa.communitymodule.ui.StoriedBuilding.bean.FilterBean;

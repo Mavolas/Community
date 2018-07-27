@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#176ce3</color>
-    <color name="colorPrimaryDark">#176ce3</color>
-    <color name="colorAccent">#176ce3</color>
+    <color name="colorPrimary">#1abc9c</color>
+    <color name="colorPrimaryDark">#1abc9c</color>
+    <color name="colorAccent">#1abc9c</color>
 
 
     <!--Filter-->
@@ -14,7 +14,7 @@
 
     <!--Login-->
     <color name="color_login_button_text">#FFFFFF</color>
-    <color name="color_login_button">#176ce3</color>
+    <color name="color_login_button">#1abc9c</color>
     <color name="color_login_button_pressed">#cccccc</color>
     <color name="color_login_hint">#999999</color>
     <color name="color_login_line">#eeeeee</color>
@@ -31,7 +31,7 @@
 
 
     <color name="whitetext">#FFFFFF</color><!--白天白色字体即为白色-->
-    <color name="app_background_color">#ebebeb</color>
+    <color name="app_background_color">#f2f2f2</color>
 
     <color name="black">#151414</color>
     <color name="black_overlay">#66000000</color>

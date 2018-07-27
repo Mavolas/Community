@@ -21,9 +21,15 @@ allprojects {
         jcenter()
         maven { url 'https://esri.bintray.com/arcgis' }
         maven { url "https://jitpack.io" }
+        maven { url  "http://dl.bintray.com/piasy/maven" }
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+ext {
+    sdkVersion = 25
+    supportLibVersion = '25.3.1'
 }

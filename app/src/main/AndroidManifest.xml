@@ -19,8 +19,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<!--
-        <activity android:name="com.ziruk.oa.communitymodule.uiCommon.activity.SplashActivity"/>-->
 
         <activity android:name="com.ziruk.oa.communitymodule.uiCommon.activity.MainActivity"/>
 
@@ -30,15 +28,19 @@
 
         <activity android:name="com.ziruk.oa.communitymodule.ui.StoriedBuilding.StoriedBuildingDetail_ActivityDemo"/>
 
+        <activity android:name="com.ziruk.oa.communitymodule.uiCommon.activity.GalleryActivity"/>
+
+        <activity android:name="com.ziruk.oa.communitymodule.ui.AttachSelectDemo.AttachSelect"/>
+
 
         <activity
             android:name="cn.finalteam.rxgalleryfinal.ui.activity.MediaActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme_Light.Blue"
+            android:theme="@style/Theme_Ablum_piker"
             android:exported="true" />
         <activity
             android:name="com.yalantis.ucrop.UCropActivity"
-            android:theme="@style/Theme_Light.Blue"
+            android:theme="@style/Theme_Ablum_piker"
             android:screenOrientation="portrait" />
 
     </application>

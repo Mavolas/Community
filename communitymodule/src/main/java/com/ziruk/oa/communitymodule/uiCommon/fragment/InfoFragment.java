@@ -14,7 +14,7 @@ public class InfoFragment extends BaseFragment {
 
     @Override
     public int getContentViewId() {
-        return R.layout.fragment_info;
+        return R.layout.tab_fragment_info;
     }
 
     @Override

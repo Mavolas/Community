@@ -26,20 +26,21 @@
         android:paddingTop="10dp" >
 
         <Button
-            android:id="@+id/btnSubmit"
+            android:id="@+id/btn_submit"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/btn_confirm_selector"
+            android:text="提交"
+            android:textColor="@color/white"
             android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:paddingLeft="40dp"
             android:paddingRight="40dp"
-            android:paddingTop="5dp"
-            android:text="提交"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white" />
+            style="@style/confirm_btn_style"
+            />
     </LinearLayout>
 
     <ScrollView
@@ -216,18 +217,16 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
                     android:layout_marginStart="20dp"
                     android:text="图片上传"
                     android:textColor="@color/color_input_title"
                     android:textSize="16sp" />
 
-                <com.facebook.drawee.view.SimpleDraweeView
+                <ImageView
                     android:id="@+id/my_image_view"
                     android:layout_marginStart="100dp"
                     android:layout_width="200dp"
                     android:layout_height="400dp"
-                    app:fadeDuration="300"
                     />
 
                 <Button
@@ -237,6 +236,24 @@
                     android:text="点击上传"
                     android:layout_marginStart="300dp"/>
             </RelativeLayout>
+
+
+
+            <com.ziruk.oa.communitymodule.view.NoScrollGridView
+                android:id="@+id/AtachInfoImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:listSelector="@android:color/transparent"
+                android:cacheColorHint="@android:color/transparent"
+                android:stretchMode="columnWidth"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:horizontalSpacing="1dip"
+                android:gravity="center"
+                android:verticalSpacing="1dip"
+                android:columnWidth="100px"
+                android:numColumns="auto_fit"
+                />
 
 
 

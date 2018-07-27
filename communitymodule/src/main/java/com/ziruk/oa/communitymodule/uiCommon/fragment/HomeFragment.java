@@ -13,7 +13,10 @@ import android.widget.TextView;
 
 import com.ziruk.oa.communitymodule.R;
 import com.ziruk.oa.communitymodule.base.fragment.BaseFragment;
+import com.ziruk.oa.communitymodule.ui.AttachSelectDemo.AttachSelect;
+import com.ziruk.oa.communitymodule.ui.PeopleInfo_Community.PeopleInfo_CommunityMain_Activity;
 import com.ziruk.oa.communitymodule.ui.StoriedBuilding.StoriedBuildingList_ActivityDemo;
+import com.ziruk.oa.communitymodule.uiCommon.activity.GalleryActivity;
 import com.ziruk.oa.communitymodule.uiCommon.fragment.bean.HomeSend;
 import com.ziruk.oa.communitymodule.util.CurrentUserInfoUtils;
 
@@ -31,12 +34,12 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     public int getContentViewId() {
-        return R.layout.fragment_home;
+        return R.layout.tab_fragment_home;
     }
 
     @Override
     protected void setHeader() {
-        setToolBarTitle("主页");
+        setToolBarTitle("任务菜单");
     }
 
 
@@ -50,10 +53,8 @@ public class HomeFragment extends BaseFragment {
         Toolbar mToolbar = ( Toolbar ) view.findViewById( R.id.toolbar );
         LinearLayout mLlGroup2 = ( LinearLayout ) view.findViewById( R.id.llGroup2 );
         NoScrollGridView mGridView2 = ( NoScrollGridView ) view.findViewById( R.id.gridView2 );
-        LinearLayout mLlGroup3 = ( LinearLayout ) view.findViewById( R.id.llGroup3 );
-        NoScrollGridView mGridView3 = ( NoScrollGridView ) view.findViewById( R.id.gridView3 );
+
         LinearLayout mLlGroup1 = ( LinearLayout ) view.findViewById( R.id.llGroup1 );
-        NoScrollGridView mGridView1 = ( NoScrollGridView ) view.findViewById( R.id.gridView1 );
 
 
         drawMenuGrid2(mGridView2, mLlGroup2);
@@ -78,32 +79,32 @@ public class HomeFragment extends BaseFragment {
         //[start] 菜单项目添加
         if ( CurrentUserInfoUtils.hasPower(getContext(), "01")) {
             map = new HashMap<String, Object>();
-            map.put("ItemImage", R.mipmap.ic_menu_01);
-            map.put("ItemText", "采购查询");
+            map.put("ItemImage", R.mipmap.icon_people_info );
+            map.put("ItemText", "人口信息");
             meumList.add(map);
             cntMenu++;
         }
 
         if (CurrentUserInfoUtils.hasPower(getContext(), "02")) {
             map = new HashMap<String, Object>();
-            map.put("ItemImage", R.mipmap.ic_menu_01);
-            map.put("ItemText", "评标管理");
+            map.put("ItemImage", R.mipmap.icon_facilities_info);
+            map.put("ItemText", "设施信息");
             meumList.add(map);
             cntMenu++;
         }
 
         if (CurrentUserInfoUtils.hasPower(getContext(), "03")) {
             map = new HashMap<String, Object>();
-            map.put("ItemImage", R.mipmap.ic_menu_01);
-            map.put("ItemText", "审批管理");
+            map.put("ItemImage", R.mipmap.icon_campany_info);
+            map.put("ItemText", "单位信息");
             meumList.add(map);
             cntMenu++;
         }
 
         if (CurrentUserInfoUtils.hasPower(getContext(), "04")) {
             map = new HashMap<String, Object>();
-            map.put("ItemImage", R.mipmap.ic_menu_01);
-            map.put("ItemText", "废标审批");
+            map.put("ItemImage", R.mipmap.icon_people_search);
+            map.put("ItemText", "人口检索");
             meumList.add(map);
             cntMenu++;
         }
@@ -130,7 +131,7 @@ public class HomeFragment extends BaseFragment {
         //[end]
 
         SimpleAdapter saItem = new SimpleAdapter(getContext(), meumList,
-                R.layout.activity_menu_item, new String[]{"ItemImage",
+                R.layout.activity_main_menu_item, new String[]{"ItemImage",
                 "ItemText"},
                 new int[]{R.id.ItemImage, R.id.itemText});
 
@@ -170,7 +171,7 @@ public class HomeFragment extends BaseFragment {
                 if (CurrentUserInfoUtils.hasPower(getContext(), "03")) {
                     // 设备维修
                     if (index == i++) {
-//                        intent.setClass(getContext(), arcgisMap.class);
+                        intent.setClass(getContext(), GalleryActivity.class);
                         intent.putExtra("mode", "1");
                         getContext().startActivity(intent);
                     }
@@ -179,7 +180,7 @@ public class HomeFragment extends BaseFragment {
                 if (CurrentUserInfoUtils.hasPower(getContext(), "04")) {
                     // 设备保养
                     if (index == i++) {
-//                        intent.setClass(getContext(), StoriedBuildingList_ActivityDemo.class);
+                        intent.setClass(getContext(), AttachSelect.class);
                         intent.putExtra("mode", "2");
                         getContext().startActivity(intent);
                     }

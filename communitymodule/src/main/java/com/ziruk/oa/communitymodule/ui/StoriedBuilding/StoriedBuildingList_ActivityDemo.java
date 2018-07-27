@@ -30,7 +30,7 @@ public class StoriedBuildingList_ActivityDemo extends BaseFragmentActivity {
 
     @Override
     public int getContentViewId() {
-        return R.layout.activity_gzsb_guzhang_shangbao_list;
+        return R.layout.activity_common_drawerlayout_frame;
     }
 
     @Override

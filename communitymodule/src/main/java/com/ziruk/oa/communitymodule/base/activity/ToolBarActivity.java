@@ -44,9 +44,7 @@ public abstract class ToolBarActivity extends BaseActivity {
         setHeader();
 
     }
-
-
-
+    
     @Override
     protected void onStart() {
         super.onStart();

@@ -7,6 +7,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
     </style>
 
     <style name="MenuStyle" parent="@style/Widget.AppCompat.Light.PopupMenu.Overflow">
@@ -41,12 +42,16 @@
         <item name="android:popupBackground">@drawable/edit_text_style_calendar</item>
     </style>
 
-    <style name="Theme_Light" parent="Theme.AppCompat.Light.NoActionBar">
-        <!--<item name="gallery_ucrop_title_text">@string/gallery_ucrop_menu_crop</item>-->
+    <style name="confirm_btn_style" parent="Base.Widget.AppCompat.Button.Borderless">
+
+        <item name="android:background">@drawable/btn_confirm_selector</item>
+
     </style>
 
 
-    <style name="Theme_Light.Blue">
+
+    <!-- 相册选择主题 -->
+    <style name="Theme_Ablum_piker" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorPrimary</item>
@@ -63,8 +68,8 @@
 
         <item name="gallery_ucrop_status_bar_color">@color/colorPrimary</item>
         <item name="gallery_ucrop_toolbar_color">@color/colorPrimary</item>
-        <item name="gallery_ucrop_toolbar_widget_color">@color/colorPrimary</item>
-        <item name="gallery_ucrop_activity_widget_color">@color/colorPrimary</item>
+<!--        <item name="gallery_ucrop_toolbar_widget_color">@color/colorPrimary</item>
+        <item name="gallery_ucrop_activity_widget_color">@color/colorPrimary</item>-->
 
         <item name="gallery_color_statusbar">@color/colorPrimary</item>
         <item name="gallery_color_active_widget">@color/colorPrimary</item>

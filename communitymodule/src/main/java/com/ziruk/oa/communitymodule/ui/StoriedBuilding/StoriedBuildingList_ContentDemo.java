@@ -17,7 +17,6 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.google.gson.reflect.TypeToken;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
@@ -29,7 +28,7 @@ import com.ziruk.oa.communitymodule.adapter.listView.ViewHolder;
 import com.ziruk.oa.communitymodule.capabilities.zirukhttp.ZirukHttpClient;
 import com.ziruk.oa.communitymodule.capabilities.zirukhttp.callback.DisposeDataListener;
 import com.ziruk.oa.communitymodule.capabilities.zirukhttp.exception.ZirukHttpException;
-import com.ziruk.oa.communitymodule.capabilities.zirukhttp.mdel.ResponseCls;
+import com.ziruk.oa.communitymodule.capabilities.zirukhttp.model.ResponseCls;
 import com.ziruk.oa.communitymodule.capabilities.zirukhttp.request.RequestParams;
 import com.ziruk.oa.communitymodule.ui.StoriedBuilding.bean.FilterBean;
 import com.ziruk.oa.communitymodule.ui.StoriedBuilding.bean.PurchaseInfo;
@@ -70,7 +69,7 @@ public class StoriedBuildingList_ContentDemo extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate( R.layout.activity_gzsb_guzhang_shangbao_content, container, false);
+        View view = inflater.inflate( R.layout.activity_common_smartrefresh_list, container, false);
 
         initView(view);
 
@@ -190,7 +189,7 @@ public class StoriedBuildingList_ContentDemo extends Fragment {
         params.put("currentUser",CurrentUserInfoUtils.getGUID(mContext));
         params.put("SreenType",mHomeSend.ScreenType);
         params.put("depart",mFilterBean.getDepartment());
-        params.put("type", mFilterBean.getStatus());
+        params.put("storageType", mFilterBean.getStatus());
         params.put("Name",mFilterBean.getBidingName());
         params.put("Num",mFilterBean.getBidingCode());
 

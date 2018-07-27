@@ -6,7 +6,7 @@ import android.app.Application;
 import android.content.Context;
 
 
-import com.facebook.drawee.backends.pipeline.Fresco;
+
 import com.ziruk.oa.communitymodule.capabilities.zirukhttp.ZirukHttpClient;
 import com.ziruk.oa.communitymodule.util.Config;
 
@@ -19,6 +19,8 @@ import java.util.concurrent.TimeUnit;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLSession;
 
+import cn.finalteam.rxgalleryfinal.imageloader.FrescoImageLoader;
+import cn.finalteam.rxgalleryfinal.imageloader.GlideImageLoader;
 import okhttp3.OkHttpClient;
 
 
@@ -53,14 +55,15 @@ public class FMApplication extends Application {
                 .build();
         ZirukHttpClient.initClient(okHttpClient);
 
-        Fresco.initialize(this);
+
+//        BigImageViewer.initialize(FrescoImageLoader.setImageSmall(  ););
 
 
 //        String address = Config.LoadConfig(getApplicationContext(), "ServerAddress");
 //        if (StringUtils.isBlank(address)) {
 //            address = ConstantUtils.GetAndroidString(
 //                    sContext,
-//                    Constant.AndroidConstantID_URLRoot);
+//                    UrlConstant.AndroidConstantID_URLRoot);
 //            Config.SaveConfig(sContext, "ServerAddress", address);
 //        }
 

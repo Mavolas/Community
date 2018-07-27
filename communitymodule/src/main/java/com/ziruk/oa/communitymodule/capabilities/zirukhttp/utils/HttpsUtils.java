@@ -18,32 +18,48 @@ import static android.content.Context.WIFI_SERVICE;
  */
 public class HttpsUtils {
 
-    final public static String AndroidConstantID_URLRoot = "cst_url_root";
-
-
-//    public void GetWifiName(Context context){
-//
-//        WifiManager wifiManager = (WifiManager) context.getSystemService(WIFI_SERVICE);
-//        WifiInfo wifiInfo = wifiManager.getConnectionInfo();
-//
-//
-//        Log.d("wifiInfo", wifiInfo.toString());
-//        Log.d("SSID",wifiInfo.getSSID());
-//
-//    }
-
 
     public static String getURLRoot(Context context)
     {
-       String URLRoot = GetAndroidString(
-               context,
-               AndroidConstantID_URLRoot);
+
+        String testServerWifiName = GetAndroidString(
+                context,
+                UrlConstant.AndroidConstantID_TestServerWifiName);
+
+        String URLRoot="";
+
+        if ( testServerWifiName.equals( GetWifiName( context ) ) ){
+
+            URLRoot= GetAndroidString(
+                    context,
+                    UrlConstant.AndroidConstantID_TestURLRoot);
+        }else {
+
+            URLRoot= GetAndroidString(
+                    context,
+                    UrlConstant.AndroidConstantID_URLRoot);
+        }
 
         if (!URLRoot.endsWith("/")){
             URLRoot += "/";
         }
         return URLRoot;
 
+    }
+
+
+    public static String GetWifiName(Context context){
+
+        WifiManager wifiManager = (WifiManager) context.getApplicationContext().getSystemService(WIFI_SERVICE);
+
+        WifiInfo wifiInfo = null;
+        if ( wifiManager != null ) {
+            wifiInfo = wifiManager.getConnectionInfo();
+        }
+//        Log.d("wifiInfo", wifiInfo.toString());
+//        Log.d("SSID",wifiInfo.getSSID());
+
+        return wifiInfo.getSSID();
     }
 
 
